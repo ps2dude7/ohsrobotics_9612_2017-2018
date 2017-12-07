@@ -12,7 +12,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 public class curlyBoiOp extends LinearOpMode {
 
-    //Hardware mapping
+    //Hardware mapping=
     owoWhatsThis hardware = new owoWhatsThis();
 
     @Override
@@ -20,7 +20,8 @@ public class curlyBoiOp extends LinearOpMode {
         //controller values
         float left;
         float right;
-        //float pitch;
+        float pitch;
+        float spring;
 
         hardware.init(hardwareMap);
 
@@ -31,21 +32,25 @@ public class curlyBoiOp extends LinearOpMode {
             //bind values
             left    = -(gamepad1.left_stick_y);
             right   = -(gamepad1.right_stick_y);
-            //pitch = gamepad1.left_trigger;
+            pitch   = gamepad1.left_trigger;
+            spring  = gamepad1.right_trigger;
 
             //init motors with opmode and hardware map
             hardware.leftRearDrive.setPower(left);
             hardware.leftFrontDrive.setPower(left);
             hardware.rightRearDrive.setPower(-(right));
             hardware.rightFrontDrive.setPower(right);
-            //hardware.pitchArm.setPower(pitch);
+            hardware.pitchArm.setPower(pitch);
+            hardware.springBlock.setPower(spring);
 
             //statuses
+            //none of this works for some reason
             telemetry.addData("ooo boi you a c u r l y  b o i","");
             telemetry.addData("STATUS ", "VALUES");
             telemetry.addData("left", "%.2f", left);
             telemetry.addData("right", "%.2f", right);
-            //telemetry.addData("pitch", "%.2f", pitch);
+            telemetry.addData("pitch", "%.2f", pitch);
+            telemetry.addData("spring", "%.2f", spring);
         }
     }
 }
