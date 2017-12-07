@@ -1,6 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
-/**
+/*
  * HARDWARE MAP created by Garrett and Ryan but mainly just Garrett and some crack cocaine on 11/29/2017. COPYRIGHT circa
 
  |* * * * * * * * * * OOOOOOOOOOOOOOOOOOOOOOOOO|
@@ -28,10 +28,8 @@ public class owoWhatsThis {
 
     //something with Motors
     //REMOVED ALL "null" VALUES ON MOTORS
-    public DcMotor leftFrontDrive       = null;
-    public DcMotor rightFrontDrive      = null;
-    public DcMotor leftRearDrive        = null;
-    public DcMotor rightRearDrive       = null;
+    public DcMotor leftDrive        = null;
+    public DcMotor rightDrive       = null;
     public DcMotor pitchArm             = null;
     public DcMotor squeezeWallMotor     = null;
     public DcMotor springBlock          = null;
@@ -62,18 +60,14 @@ public class owoWhatsThis {
          */
 
         //Find and Init Motors
-        leftFrontDrive      = defaultHwMap.get(DcMotor.class,  "leftFrontMotor");
-        rightFrontDrive     = defaultHwMap.get(DcMotor.class, "rightFrontMotor");
-        leftRearDrive       = defaultHwMap.get(DcMotor.class, "leftRearMotor");
-        rightRearDrive      = defaultHwMap.get(DcMotor.class, "rightRearMotor");
+        leftDrive           = defaultHwMap.get(DcMotor.class, "leftMotor");
+        rightDrive          = defaultHwMap.get(DcMotor.class, "rightMotor");
         pitchArm            = defaultHwMap.get(DcMotor.class, "pitchArm");
         squeezeWallMotor    = defaultHwMap.get(DcMotor.class, "squeezeWall");
         springBlock         = defaultHwMap.get(DcMotor.class, "springBlock");
 
-        leftFrontDrive.setPower(0);
-        rightFrontDrive.setPower(0);
-        leftRearDrive.setPower(0);
-        rightRearDrive.setPower(0);
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
         pitchArm.setPower(0);
         squeezeWallMotor.setPower(0);
         springBlock.setPower(0);

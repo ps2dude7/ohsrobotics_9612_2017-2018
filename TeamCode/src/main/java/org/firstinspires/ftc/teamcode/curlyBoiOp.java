@@ -1,6 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
-/**
+/*
  * hooooooooooooooooooooooooooooooooooooo
  * also edit hardware map for motors and shit
  */
@@ -36,10 +36,8 @@ public class curlyBoiOp extends LinearOpMode {
             spring  = gamepad1.right_trigger;
 
             //init motors with opmode and hardware map
-            hardware.leftRearDrive.setPower(left);
-            hardware.leftFrontDrive.setPower(left);
-            hardware.rightRearDrive.setPower(-(right));
-            hardware.rightFrontDrive.setPower(right);
+            hardware.leftDrive.setPower(left);
+            hardware.rightDrive.setPower(-(right));
             hardware.pitchArm.setPower(pitch);
             hardware.springBlock.setPower(spring);
 
