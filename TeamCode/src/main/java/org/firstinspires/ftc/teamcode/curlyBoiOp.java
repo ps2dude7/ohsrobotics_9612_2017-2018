@@ -37,7 +37,7 @@ public class curlyBoiOp extends LinearOpMode {
 
             //init motors with opmode and hardware map
             hardware.leftDrive.setPower(left);
-            hardware.rightDrive.setPower(right); //single handedly the most retarded line in this opmode
+            hardware.rightDrive.setPower(right);
             hardware.pitchArm.setPower(pitch);
             hardware.springBlock.setPower(spring);
 
