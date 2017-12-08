@@ -31,13 +31,13 @@ public class curlyBoiOp extends LinearOpMode {
 
             //bind values
             left    = -(gamepad1.left_stick_y);
-            right   = -(gamepad1.right_stick_y);
+            right   = gamepad1.right_stick_y;
             pitch   = gamepad1.left_trigger;
             spring  = gamepad1.right_trigger;
 
             //init motors with opmode and hardware map
             hardware.leftDrive.setPower(left);
-            hardware.rightDrive.setPower(-(right)); //single handedly the most retarded line in this opmode
+            hardware.rightDrive.setPower(right); //single handedly the most retarded line in this opmode
             hardware.pitchArm.setPower(pitch);
             hardware.springBlock.setPower(spring);
 
@@ -49,6 +49,7 @@ public class curlyBoiOp extends LinearOpMode {
             telemetry.addData("right", "%.2f", right);
             telemetry.addData("pitch", "%.2f", pitch);
             telemetry.addData("spring", "%.2f", spring);
+            telemetry.update();
         }
     }
 }
