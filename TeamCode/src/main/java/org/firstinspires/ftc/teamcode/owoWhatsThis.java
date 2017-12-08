@@ -1,6 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
-/*
+/**
  * HARDWARE MAP created by Garrett and Ryan but mainly just Garrett and some crack cocaine on 11/29/2017. COPYRIGHT circa
 
  |* * * * * * * * * * OOOOOOOOOOOOOOOOOOOOOOOOO|
@@ -49,9 +49,9 @@ public class owoWhatsThis {
         /**
          * For anyone curious.
          *
-         * the two lines above this(45, 46) are possibly the dumbest thing in the whole world
-         * you have a hardware map that is entirely forced to be "ahwMap" while also in ln. 36
-         * there is a hardware map named "hwMap" that could have singlehandedly worked everything out
+         * the two lines above this(47, 48) are possibly the dumbest thing in the whole world
+         * you have a hardware map that is entirely forced to be "defautHwMap" while also in ln. 38
+         * there is a hardware map named "updateHwMap" that could have singlehandedly worked everything out
          * with zero issues. But NOOOOO IT HAS TO BE SOME AUTISTIC PIECE OF SHIT WHO WROTE THIS
          * AND HAD NO IDEA WHAT THE FUCK THIS LOOKS LIKE AND ITS IMPOSSIBLE TO CHANGE THE DAMN THING
          * WITHOUT BITCHING AND COMPLAINING ENOUGH FOR YOU NOT TO CARE.
