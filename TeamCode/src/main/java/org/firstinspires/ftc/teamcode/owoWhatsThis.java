@@ -32,7 +32,7 @@ public class owoWhatsThis {
     public DcMotor rightDrive           = null;
     public DcMotor armWinch             = null;
     public DcMotor squishDrive1         = null;
-    public DcMotor squishDrive2         = null;
+    //public DcMotor squishDrive2         = null;
     //youre mom gay
 
     HardwareMap defaultHwMap = null;
@@ -52,14 +52,14 @@ public class owoWhatsThis {
         rightDrive      = defaultHwMap.get(DcMotor.class, "rightMotor");
         armWinch        = defaultHwMap.get(DcMotor.class, "winchMotor");
         squishDrive1    = defaultHwMap.get(DcMotor.class, "squishMotor1");
-        squishDrive2    = defaultHwMap.get(DcMotor.class, "squishMotor2");
+        //squishDrive2    = defaultHwMap.get(DcMotor.class, "squishMotor2");
 
         //set power to motors on power
         leftDrive.setPower(0);
         rightDrive.setPower(0);
         armWinch.setPower(0);
         squishDrive1.setPower(0);
-        squishDrive2.setPower(0);
+        //squishDrive2.setPower(0);
         //here us yoiu r v
     }
 }
