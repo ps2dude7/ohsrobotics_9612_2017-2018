@@ -28,11 +28,11 @@ public class owoWhatsThis {
 
     //something with Motors
     //REMOVED ALL "null" VALUES ON MOTORS
-    public DcMotor leftDrive        = null;
-    public DcMotor rightDrive       = null;
-    public DcMotor pitchArm             = null;
-    public DcMotor squeezeWallMotor     = null;
-    public DcMotor springBlock          = null;
+    public DcMotor leftDrive            = null;
+    public DcMotor rightDrive           = null;
+    public DcMotor armWinch             = null;
+    public DcMotor squishDrive1         = null;
+    public DcMotor squishDrive2         = null;
     //youre mom gay
 
     HardwareMap defaultHwMap = null;
@@ -48,18 +48,18 @@ public class owoWhatsThis {
         defaultHwMap = updateHwMap;
 
         //Find and Init Motors
-        leftDrive           = defaultHwMap.get(DcMotor.class, "leftMotor");
-        rightDrive          = defaultHwMap.get(DcMotor.class, "rightMotor");
-        pitchArm            = defaultHwMap.get(DcMotor.class, "pitchArm");
-        squeezeWallMotor    = defaultHwMap.get(DcMotor.class, "squeezeWall");
-        springBlock         = defaultHwMap.get(DcMotor.class, "springBlock");
+        leftDrive       = defaultHwMap.get(DcMotor.class, "leftMotor");
+        rightDrive      = defaultHwMap.get(DcMotor.class, "rightMotor");
+        armWinch        = defaultHwMap.get(DcMotor.class, "winchMotor");
+        squishDrive1    = defaultHwMap.get(DcMotor.class, "squishMotor1");
+        squishDrive2    = defaultHwMap.get(DcMotor.class, "squishMotor2");
 
         //set power to motors on power
         leftDrive.setPower(0);
         rightDrive.setPower(0);
-        pitchArm.setPower(0);
-        squeezeWallMotor.setPower(0);
-        springBlock.setPower(0);
+        armWinch.setPower(0);
+        squishDrive1.setPower(0);
+        squishDrive2.setPower(0);
         //here us yoiu r v
     }
 }
