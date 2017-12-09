@@ -1,8 +1,7 @@
 package org.firstinspires.ftc.teamcode;
 
-/*
+/**
  * hooooooooooooooooooooooooooooooooooooo
- * also edit hardware map for motors and shit
  */
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
@@ -17,7 +16,7 @@ public class curlyBoiOp extends LinearOpMode {
 
     @Override
     public void runOpMode() throws InterruptedException {
-        //controller values
+        //controller values my name jeff
         float left;
         float right;
         float pitch;
@@ -43,7 +42,7 @@ public class curlyBoiOp extends LinearOpMode {
 
             //statuses
             //none of this works for some reason
-            telemetry.addData("ooo boi you a c u r l y  b o i","");
+            telemetry.addData("ooo boi you a c u r l y  b o i","y e e t");
             telemetry.addData("STATUS ", "VALUES");
             telemetry.addData("left", "%.2f", left);
             telemetry.addData("right", "%.2f", right);
