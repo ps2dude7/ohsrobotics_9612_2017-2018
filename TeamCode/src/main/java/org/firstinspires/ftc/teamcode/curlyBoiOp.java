@@ -41,7 +41,6 @@ public class curlyBoiOp extends LinearOpMode {
             hardware.springBlock.setPower(spring);
 
             //statuses
-            //none of this works for some reason
             telemetry.addData("ooo boi you a c u r l y  b o i","y e e t");
             telemetry.addData("STATUS ", "VALUES");
             telemetry.addData("left", "%.2f", left);

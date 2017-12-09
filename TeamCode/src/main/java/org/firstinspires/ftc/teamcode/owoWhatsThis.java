@@ -46,18 +46,6 @@ public class owoWhatsThis {
     //my name is jeff
     public void init (HardwareMap updateHwMap) {
         defaultHwMap = updateHwMap;
-        /**
-         * For anyone curious.
-         *
-         * the two lines above this(47, 48) are possibly the dumbest thing in the whole world
-         * you have a hardware map that is entirely forced to be "defautHwMap" while also in ln. 38
-         * there is a hardware map named "updateHwMap" that could have singlehandedly worked everything out
-         * with zero issues. But NOOOOO IT HAS TO BE SOME AUTISTIC PIECE OF SHIT WHO WROTE THIS
-         * AND HAD NO IDEA WHAT THE FUCK THIS LOOKS LIKE AND ITS IMPOSSIBLE TO CHANGE THE DAMN THING
-         * WITHOUT BITCHING AND COMPLAINING ENOUGH FOR YOU NOT TO CARE.
-         *
-         * /rant
-         */
 
         //Find and Init Motors
         leftDrive           = defaultHwMap.get(DcMotor.class, "leftMotor");
@@ -66,6 +54,7 @@ public class owoWhatsThis {
         squeezeWallMotor    = defaultHwMap.get(DcMotor.class, "squeezeWall");
         springBlock         = defaultHwMap.get(DcMotor.class, "springBlock");
 
+        //set power to motors on power
         leftDrive.setPower(0);
         rightDrive.setPower(0);
         pitchArm.setPower(0);
