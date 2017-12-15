@@ -1,25 +1,7 @@
 package org.firstinspires.ftc.teamcode;
 
-/**
- * HARDWARE MAP created by Garrett and Ryan but mainly just Garrett and some crack cocaine on 11/29/2017. COPYRIGHT circa
+ // HARDWARE MAP created by Garrett and Ryan but mainly just Garrett on 11/29/2017. COPYRIGHT circa
 
- |* * * * * * * * * * OOOOOOOOOOOOOOOOOOOOOOOOO|
- | * * * * * * * * *  :::::::::::::::::::::::::|
- |* * * * * * * * * * OOOOOOOOOOOOOOOOOOOOOOOOO|
- | * * * * * * * * *  :::::::::::::::::::::::::|
- |* * * * * * * * * * OOOOOOOOOOOOOOOOOOOOOOOOO|
- | * * * * * * * * *  ::::::::::::::::::::;::::|
- |* * * * * * * * * * OOOOOOOOOOOOOOOOOOOOOOOOO|
- |:::::::::::::::::::::::::::::::::::::::::::::|
- |OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO|
- |:::::::::::::::::::::::::::::::::::::::::::::|
- |OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO|
- |:::::::::::::::::::::::::::::::::::::::::::::|
- |OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO|
-
- ヽ(~～~ )ノヽ(~～~ )ノヽ(~～~ )ノヽ(~～~ )ノヽ(~～~ )ノ
-
- */
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
@@ -52,7 +34,7 @@ public class owoWhatsThis {
         rightDrive      = defaultHwMap.get(DcMotor.class, "rightMotor");
         armWinch        = defaultHwMap.get(DcMotor.class, "winchMotor");
         squishDrive1    = defaultHwMap.get(DcMotor.class, "squishMotor1");
-        //squishDrive2    = defaultHwMap.get(DcMotor.class, "squishMotor2");
+        //squishDrive2    = and some crack cocaine ondefaultHwMap.get(DcMotor.class, "squishMotor2");
 
         //set power to motors on power
         leftDrive.setPower(0);
@@ -61,5 +43,9 @@ public class owoWhatsThis {
         squishDrive1.setPower(0);
         //squishDrive2.setPower(0);
         //here us yoiu r v
+        leftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        rightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        armWinch.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        squishDrive1.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
     }
 }

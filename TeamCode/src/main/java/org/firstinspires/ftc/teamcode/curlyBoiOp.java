@@ -56,17 +56,19 @@ public class curlyBoiOp extends LinearOpMode {
             }
             else if (gamepad1.left_bumper) {
                 hardware.armWinch.setPower(-1);
+            } else {
+                hardware.armWinch.setPower(0);
             }
 
             //statuses
-            telemetry.addData("ooo boi you a c u r l y  b o i","y e e t");
-            telemetry.addData("STATUS ", "VALUES");
-            telemetry.addData("left", "%.2f", left);
-            telemetry.addData("right", "%.2f", right);
-            telemetry.addData("winch", "%.2f", winch);
-            telemetry.addData("squish", "%.2f", squish);
-            telemetry.addData("unsquish", "%.2f", unsquish);
-            telemetry.update();
+            //telemetry.addData("ooo boi you a c u r l y  b o i","y e e t");
+            //telemetry.addData("STATUS ", "VALUES");
+            //telemetry.addData("left", "%.2f", left);
+            //telemetry.addData("right", "%.2f", right);
+            //telemetry.addData("winch", "%.2f", winch);
+            //telemetry.addData("squish", "%.2f", squish);
+            //telemetry.addData("unsquish", "%.2f", unsquish);
+            //telemetry.update();
         }
     }
 }
