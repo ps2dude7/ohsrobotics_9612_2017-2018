@@ -9,7 +9,6 @@ package org.firstinspires.ftc.teamcode;
  */
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import android.media.*;
 
 public class miniBoi extends LinearOpMode {
     owoWhatsThis hardware = new owoWhatsThis();
@@ -20,8 +19,6 @@ public class miniBoi extends LinearOpMode {
         float left;
         float right;
 
-        MediaPlayer mediaPlayer = MediaPlayer.create(R.raw.sound_file);
-
         hardware.init(hardwareMap);
 
         waitForStart();
@@ -31,13 +28,6 @@ public class miniBoi extends LinearOpMode {
             left    = gamepad1.left_stick_y;
             right   = -(gamepad1.right_stick_y);
 
-            if(gamepad1.a) {
-                mediaPlayer.start();
-            }
-
-            else {
-                mediaPlayer.stop();
-            }
             //controls the motors
             hardware.leftDrive.setPower(left);
             hardware.rightDrive.setPower(right);
