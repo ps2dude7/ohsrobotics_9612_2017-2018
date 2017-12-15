@@ -9,6 +9,9 @@ package org.firstinspires.ftc.teamcode;
  */
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+
+@TeleOp(name="MiniBoi", group="Linear OpMode")
 
 public class miniBoi extends LinearOpMode {
     owoWhatsThis hardware = new owoWhatsThis();
@@ -31,6 +34,14 @@ public class miniBoi extends LinearOpMode {
             //controls the motors
             hardware.leftDrive.setPower(left);
             hardware.rightDrive.setPower(right);
+
+            if (gamepad1.right_bumper) {
+                hardware.armWinch.setPower(1);
+            } else if (gamepad1.left_stick_button) {
+                hardware.armWinch.setPower(-1);
+            } else {
+                hardware.armWinch.setPower(0);
+            }
         }
     }
 }
