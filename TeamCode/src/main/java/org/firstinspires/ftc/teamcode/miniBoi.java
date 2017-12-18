@@ -37,7 +37,7 @@ public class miniBoi extends LinearOpMode {
 
             if (gamepad1.right_bumper) {
                 hardware.armWinch.setPower(1);
-            } else if (gamepad1.left_stick_button) {
+            } else if (gamepad1.left_bumper) {
                 hardware.armWinch.setPower(-1);
             } else {
                 hardware.armWinch.setPower(0);
