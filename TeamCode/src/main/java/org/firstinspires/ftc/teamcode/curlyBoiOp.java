@@ -4,10 +4,12 @@ package org.firstinspires.ftc.teamcode;
  * hooooooooooooooooooooooooooooooooooooo
  */
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 @TeleOp(name="CurlyBoiOp", group ="Linear Opmode")
+@Disabled
 
 public class curlyBoiOp extends LinearOpMode {
 
@@ -59,16 +61,6 @@ public class curlyBoiOp extends LinearOpMode {
             } else {
                 hardware.armWinch.setPower(0);
             }
-
-            //statuses
-            //telemetry.addData("ooo boi you a c u r l y  b o i","y e e t");
-            //telemetry.addData("STATUS ", "VALUES");
-            //telemetry.addData("left", "%.2f", left);
-            //telemetry.addData("right", "%.2f", right);
-            //telemetry.addData("winch", "%.2f", winch);
-            //telemetry.addData("squish", "%.2f", squish);
-            //telemetry.addData("unsquish", "%.2f", unsquish);
-            //telemetry.update();
         }
     }
 }
