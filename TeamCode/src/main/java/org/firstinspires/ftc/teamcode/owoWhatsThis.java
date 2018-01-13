@@ -21,6 +21,8 @@ public class owoWhatsThis {
     public Servo clawServo3     = null;
     public Servo clawServo4     = null;
     public Servo jewelstick     = null;
+    public Servo relicServo1    = null;
+    public Servo relicServo2    = null;
     //youre mom gay
 
     HardwareMap defaultHwMap = null;
@@ -39,12 +41,16 @@ public class owoWhatsThis {
         leftDrive       = defaultHwMap.get(DcMotor.class, "leftMotor");
         rightDrive      = defaultHwMap.get(DcMotor.class, "rightMotor");
         armWinch        = defaultHwMap.get(DcMotor.class, "winchMotor");
+        relicMotor      = defaultHwMap.get(DcMotor.class, "relicMotor");
 
         //Find and Init servos
         clawServo1      = defaultHwMap.get(Servo.class, "clawTopRight");
         clawServo2      = defaultHwMap.get(Servo.class, "clawBottomRight");
         clawServo3      = defaultHwMap.get(Servo.class, "clawTopLeft");
         clawServo4      = defaultHwMap.get(Servo.class, "clawBottomLeft");
+        jewelstick      = defaultHwMap.get(Servo.class, "jewelStick");
+        relicServo1     = defaultHwMap.get(Servo.class, "relicServo1");
+        relicServo2     = defaultHwMap.get(Servo.class, "relicServo2");
 
         //set power to motors on power
         leftDrive.setPower(0);

@@ -38,16 +38,16 @@ public class gayestBarInAtlantaOp extends LinearOpMode {
             hardware.clawServo4.setPosition(clawGrip);
 
             //EMBRACE THE JANK
-            if (gamepad1.right_bumper) {
+            if (gamepad2.right_bumper) {
                 hardware.armWinch.setPower(1);
-            } else if (gamepad1.left_bumper) {
+            } else if (gamepad2.left_bumper) {
                 hardware.armWinch.setPower(-1);
-            } else if (gamepad1.right_trigger <= 0.05) {
+            } else if (gamepad2.right_trigger <= 0.05) {
                 hardware.clawServo1.setPosition(clawGrip++);
                 hardware.clawServo2.setPosition(clawGrip++);
                 hardware.clawServo3.setPosition(-(clawGrip++));
                 hardware.clawServo4.setPosition(-(clawGrip++));
-            } else if (gamepad1.left_trigger <= 0.05) {
+            } else if (gamepad2.left_trigger <= 0.05) {
                 hardware.clawServo1.setPosition(-(clawGrip++));
                 hardware.clawServo2.setPosition(-(clawGrip++));
                 hardware.clawServo3.setPosition(clawGrip++);
