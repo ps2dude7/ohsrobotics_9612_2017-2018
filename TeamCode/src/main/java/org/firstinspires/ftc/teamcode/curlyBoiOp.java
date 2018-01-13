@@ -42,11 +42,11 @@ public class curlyBoiOp extends LinearOpMode {
             hardware.rightDrive.setPower(right);
 
             //compression
-            hardware.squishDrive1.setPower(squish);
+            //hardware.squishDrive1.setPower(squish);
             //hardware.squishDrive2.setPower(squish);
 
             //decompression
-            hardware.squishDrive1.setPower(unsquish);
+            //hardware.squishDrive1.setPower(unsquish);
             //hardware.squishDrive2.setPower(unsquish);
 
             /**NOTE:
