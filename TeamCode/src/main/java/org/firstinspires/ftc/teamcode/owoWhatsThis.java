@@ -20,7 +20,7 @@ public class owoWhatsThis {
     public Servo clawServo2     = null;
     public Servo clawServo3     = null;
     public Servo clawServo4     = null;
-    public Servo jewelstick     = null;
+    public Servo jewelStick     = null;
     public Servo relicServo1    = null;
     public Servo relicServo2    = null;
     //youre mom gay
@@ -48,7 +48,7 @@ public class owoWhatsThis {
         clawServo2      = defaultHwMap.get(Servo.class, "clawBottomRight");
         clawServo3      = defaultHwMap.get(Servo.class, "clawTopLeft");
         clawServo4      = defaultHwMap.get(Servo.class, "clawBottomLeft");
-        jewelstick      = defaultHwMap.get(Servo.class, "jewelStick");
+        jewelStick      = defaultHwMap.get(Servo.class, "jewelStick");
         relicServo1     = defaultHwMap.get(Servo.class, "relicServo1");
         relicServo2     = defaultHwMap.get(Servo.class, "relicServo2");
 
@@ -63,10 +63,14 @@ public class owoWhatsThis {
         clawServo2.setPosition(0);
         clawServo3.setPosition(0);
         clawServo4.setPosition(0);
+        jewelStick.setPosition(180);
+        relicServo1.setPosition(0);
+        relicServo1.setPosition(0);
 
         //here us yoiu r v
         leftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         armWinch.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        relicMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
     }
 }

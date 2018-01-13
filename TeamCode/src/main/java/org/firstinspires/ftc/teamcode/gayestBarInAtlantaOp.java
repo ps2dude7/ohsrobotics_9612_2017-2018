@@ -13,8 +13,10 @@ public class gayestBarInAtlantaOp extends LinearOpMode {
     public void runOpMode() throws InterruptedException {
         float left;
         float right;
-        float clawGrip = 0;
-        float clawDelta;
+        float clawGrip1 = 0;
+        float clawGrip2 = 0;
+        float clawGrip3 = 0;
+        float clawGrip4 = 0;
         boolean winch = false;
 
         hardware.init(hardwareMap);
@@ -29,29 +31,32 @@ public class gayestBarInAtlantaOp extends LinearOpMode {
 
             //drive
             hardware.leftDrive.setPower(left);
-            hardware.leftDrive.setPower(right);
-
-            //servos
-            hardware.clawServo1.setPosition(clawGrip);
-            hardware.clawServo2.setPosition(clawGrip);
-            hardware.clawServo3.setPosition(clawGrip);
-            hardware.clawServo4.setPosition(clawGrip);
+            hardware.rightDrive.setPower(right);
 
             //EMBRACE THE JANK
             if (gamepad2.right_bumper) {
                 hardware.armWinch.setPower(1);
             } else if (gamepad2.left_bumper) {
                 hardware.armWinch.setPower(-1);
-            } else if (gamepad2.right_trigger <= 0.05) {
-                hardware.clawServo1.setPosition(clawGrip++);
-                hardware.clawServo2.setPosition(clawGrip++);
-                hardware.clawServo3.setPosition(-(clawGrip++));
-                hardware.clawServo4.setPosition(-(clawGrip++));
-            } else if (gamepad2.left_trigger <= 0.05) {
-                hardware.clawServo1.setPosition(-(clawGrip++));
-                hardware.clawServo2.setPosition(-(clawGrip++));
-                hardware.clawServo3.setPosition(clawGrip++);
-                hardware.clawServo4.setPosition(clawGrip++);
+            } else {
+                hardware.armWinch.setPower(0);
+            }
+
+            if (gamepad2.right_trigger <= 0.1) {
+                hardware.clawServo1.setPosition(clawGrip1++);
+                hardware.clawServo2.setPosition(clawGrip2++);
+                hardware.clawServo3.setPosition(-(clawGrip3++));
+                hardware.clawServo4.setPosition(-(clawGrip4++));
+            } else if (gamepad2.left_trigger <= 0.1) {
+                hardware.clawServo1.setPosition(-(clawGrip1++));
+                hardware.clawServo2.setPosition(-(clawGrip2++));
+                hardware.clawServo3.setPosition(clawGrip3++);
+                hardware.clawServo4.setPosition(clawGrip4++);
+            } else {
+                hardware.clawServo1.setPosition(clawGrip1);
+                hardware.clawServo2.setPosition(clawGrip2);
+                hardware.clawServo3.setPosition(clawGrip3);
+                hardware.clawServo4.setPosition(clawGrip4);
             }
         }
     }

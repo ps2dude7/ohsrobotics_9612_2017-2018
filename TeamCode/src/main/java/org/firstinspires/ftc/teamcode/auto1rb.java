@@ -9,6 +9,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  */
 @Autonomous(name = "auto1rb", group = "Autonomous")
 public class auto1rb extends LinearOpMode {
+
     owoWhatsThis hardware = new owoWhatsThis();
     ElapsedTime runtime = new ElapsedTime();
 
@@ -17,30 +18,43 @@ public class auto1rb extends LinearOpMode {
 
         waitForStart();
         // Lower arm
-        hardware.jewelstick.setPosition(180);
+        hardware.jewelStick.setPosition(180);
         // Move forward
-        hardware.leftDrive.setTargetPosition(1);
-        hardware.rightDrive.setTargetPosition(1);
-        hardware.leftDrive.setPower(1);
-        hardware.rightDrive.setPower(1);
+        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
+            hardware.leftDrive.setTargetPosition(1);
+            hardware.rightDrive.setTargetPosition(1);
+            hardware.leftDrive.setPower(1);
+            hardware.rightDrive.setPower(1);
+        }
+        runtime.reset();
         // Raise arm
-        hardware.jewelstick.setPosition(20);
+        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
+            hardware.jewelStick.setPosition(20);
+        }
+        runtime.reset();
         // Move forward
-        hardware.leftDrive.setTargetPosition(1);
-        hardware.rightDrive.setTargetPosition(1);
-        hardware.leftDrive.setPower(1);
-        hardware.rightDrive.setPower(1);
+        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
+            hardware.leftDrive.setTargetPosition(1);
+            hardware.rightDrive.setTargetPosition(1);
+            hardware.leftDrive.setPower(1);
+            hardware.rightDrive.setPower(1);
+        }
+        runtime.reset();
         // Turn 90 degrees (janky)
-        hardware.leftDrive.setTargetPosition(2);
-        hardware.rightDrive.setTargetPosition(2);
-        hardware.leftDrive.setPower(1);
-        hardware.rightDrive.setPower(-1);
+        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
+            hardware.leftDrive.setTargetPosition(2);
+            hardware.rightDrive.setTargetPosition(2);
+            hardware.leftDrive.setPower(1);
+            hardware.rightDrive.setPower(-1);
+        }
+        runtime.reset();
         // Move forward
-        hardware.leftDrive.setTargetPosition(1);
-        hardware.rightDrive.setTargetPosition(1);
-        hardware.leftDrive.setPower(1);
-        hardware.rightDrive.setPower(1);
-
+        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
+            hardware.leftDrive.setTargetPosition(1);
+            hardware.rightDrive.setTargetPosition(1);
+            hardware.leftDrive.setPower(1);
+            hardware.rightDrive.setPower(1);
+        }
     }
 }
 
