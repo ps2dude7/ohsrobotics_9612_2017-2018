@@ -3,9 +3,9 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
-@TeleOp(name = "UgandanBoiOp", group = "Linear Opmode")
+@TeleOp(name = "gayestBarInAtlantaOp", group = "Linear Opmode")
 
-public class ugandanBoiOp extends LinearOpMode {
+public class gayestBarInAtlantaOp extends LinearOpMode {
 
     owoWhatsThis hardware = new owoWhatsThis();
 
@@ -14,6 +14,7 @@ public class ugandanBoiOp extends LinearOpMode {
         float left;
         float right;
         float clawGrip = 0;
+        float clawDelta;
         boolean winch = false;
 
         hardware.init(hardwareMap);

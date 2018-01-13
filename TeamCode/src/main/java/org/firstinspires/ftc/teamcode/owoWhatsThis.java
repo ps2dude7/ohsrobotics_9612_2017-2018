@@ -10,16 +10,17 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 public class owoWhatsThis {
 
     //something with Motors
-    public DcMotor leftDrive            = null;
-    public DcMotor rightDrive           = null;
-    public DcMotor armWinch             = null;
-    public DcMotor squishDrive1         = null;
+    public DcMotor leftDrive    = null;
+    public DcMotor rightDrive   = null;
+    public DcMotor armWinch     = null;
+    public DcMotor relicMotor   = null;
 
-    //we got some ugandan servos
-    public Servo clawServo1             = null;
-    public Servo clawServo2             = null;
-    public Servo clawServo3             = null;
-    public Servo clawServo4             = null;
+    //we got some dope servos
+    public Servo clawServo1     = null;
+    public Servo clawServo2     = null;
+    public Servo clawServo3     = null;
+    public Servo clawServo4     = null;
+    public Servo jewelstick     = null;
     //youre mom gay
 
     HardwareMap defaultHwMap = null;
@@ -38,19 +39,18 @@ public class owoWhatsThis {
         leftDrive       = defaultHwMap.get(DcMotor.class, "leftMotor");
         rightDrive      = defaultHwMap.get(DcMotor.class, "rightMotor");
         armWinch        = defaultHwMap.get(DcMotor.class, "winchMotor");
-        squishDrive1    = defaultHwMap.get(DcMotor.class, "squishMotor1");
 
         //Find and Init servos
-        clawServo1      = defaultHwMap.get(Servo.class, "clawServo1");
-        clawServo2      = defaultHwMap.get(Servo.class, "clawServo2");
-        clawServo3      = defaultHwMap.get(Servo.class, "clawServo3");
-        clawServo4      = defaultHwMap.get(Servo.class, "clawServo4");
+        clawServo1      = defaultHwMap.get(Servo.class, "clawTopRight");
+        clawServo2      = defaultHwMap.get(Servo.class, "clawBottomRight");
+        clawServo3      = defaultHwMap.get(Servo.class, "clawTopLeft");
+        clawServo4      = defaultHwMap.get(Servo.class, "clawBottomLeft");
 
         //set power to motors on power
         leftDrive.setPower(0);
         rightDrive.setPower(0);
         armWinch.setPower(0);
-        squishDrive1.setPower(0);
+        relicMotor.setPower(0);
 
         //Position Servos
         clawServo1.setPosition(0);
@@ -62,6 +62,5 @@ public class owoWhatsThis {
         leftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         armWinch.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        squishDrive1.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
     }
 }

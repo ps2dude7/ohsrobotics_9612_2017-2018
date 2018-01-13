@@ -10,8 +10,10 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 
 @TeleOp(name="MiniBoi", group="Linear OpMode")
+@Disabled
 
 public class miniBoi extends LinearOpMode {
     owoWhatsThis hardware = new owoWhatsThis();
