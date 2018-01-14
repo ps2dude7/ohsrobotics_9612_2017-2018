@@ -3,60 +3,126 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 /**
- * Created by ryaniscool on 1/12/18.
+ * Created by ryan is cool on 1/12/18.
  */
 @Autonomous(name = "auto1rb", group = "Autonomous")
-@Disabled
+
 public class auto1rb extends LinearOpMode {
 
     owoWhatsThis hardware = new owoWhatsThis();
-    ElapsedTime runtime = new ElapsedTime();
+
+    int rev = 1440;
 
     @Override
     public void runOpMode() throws InterruptedException {
+        hardware.init(hardwareMap);
 
         waitForStart();
-        // Lower arm
+        //arm down
+        hardware.jewelStick.setPosition(0);
+
+        //move backwards
+        hardware.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        hardware.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+        hardware.rightDrive.setTargetPosition(-rev / 12);
+        hardware.leftDrive.setTargetPosition(-rev / 12);
+
+        hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        hardware.rightDrive.setPower(.5);
+        hardware.leftDrive.setPower(.5);
+
+
+        while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
+                //empty on purpose
+        }
+
+        hardware.rightDrive.setPower(0);
+        hardware.leftDrive.setPower(0);
+
+        hardware.rightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        hardware.leftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+
+        //arm up
         hardware.jewelStick.setPosition(180);
-        // Move forward
-        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
-            hardware.leftDrive.setTargetPosition(1);
-            hardware.rightDrive.setTargetPosition(1);
-            hardware.leftDrive.setPower(1);
-            hardware.rightDrive.setPower(1);
+
+        //backwards
+        hardware.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        hardware.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+        hardware.rightDrive.setTargetPosition(-rev);
+        hardware.leftDrive.setTargetPosition(-rev);
+
+        hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        hardware.rightDrive.setPower(.5);
+        hardware.leftDrive.setPower(.5);
+
+
+        while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
+            //empty on purpose
         }
-        runtime.reset();
-        // Raise arm
-        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
-            hardware.jewelStick.setPosition(20);
+
+        hardware.rightDrive.setPower(0);
+        hardware.leftDrive.setPower(0);
+
+        hardware.rightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        hardware.leftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+
+        //left rotate
+        hardware.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        hardware.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+        hardware.rightDrive.setTargetPosition((int) (-rev * 2.125));
+        hardware.leftDrive.setTargetPosition((int) (rev * 2.125));
+
+        hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        hardware.rightDrive.setPower(.5);
+        hardware.leftDrive.setPower(.5);
+
+
+        while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
+            //empty on purpose
         }
-        runtime.reset();
-        // Move forward
-        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
-            hardware.leftDrive.setTargetPosition(1);
-            hardware.rightDrive.setTargetPosition(1);
-            hardware.leftDrive.setPower(1);
-            hardware.rightDrive.setPower(1);
+
+        hardware.rightDrive.setPower(0);
+        hardware.leftDrive.setPower(0);
+
+        hardware.rightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        hardware.leftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+
+
+        hardware.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        hardware.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+        hardware.rightDrive.setTargetPosition((int) (rev * .25));
+        hardware.leftDrive.setTargetPosition((int) (rev * .25));
+
+        hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        hardware.rightDrive.setPower(.5);
+        hardware.leftDrive.setPower(.5);
+
+
+        while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
+            //empty on purpose
         }
-        runtime.reset();
-        // Turn 90 degrees (janky)
-        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
-            hardware.leftDrive.setTargetPosition(2);
-            hardware.rightDrive.setTargetPosition(2);
-            hardware.leftDrive.setPower(1);
-            hardware.rightDrive.setPower(-1);
-        }
-        runtime.reset();
-        // Move forward
-        while (opModeIsActive() && (runtime.seconds() < 1.0)) {
-            hardware.leftDrive.setTargetPosition(1);
-            hardware.rightDrive.setTargetPosition(1);
-            hardware.leftDrive.setPower(1);
-            hardware.rightDrive.setPower(1);
-        }
+
+        hardware.rightDrive.setPower(0);
+        hardware.leftDrive.setPower(0);
+
+        hardware.rightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        hardware.leftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
     }
 }
 

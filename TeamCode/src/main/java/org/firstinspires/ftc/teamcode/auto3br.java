@@ -7,9 +7,9 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 /**
  * Created by ryaniscool on 1/12/18.
  */
-@Autonomous(name = "auto1rb", group = "Autonomous")
+@Autonomous(name = "auto3br", group = "Autonomous")
 
-public class auto3rb extends LinearOpMode {
+public class auto3br extends LinearOpMode {
 
     owoWhatsThis hardware = new owoWhatsThis();
 
@@ -17,6 +17,7 @@ public class auto3rb extends LinearOpMode {
 
     @Override
     public void runOpMode() throws InterruptedException {
+        hardware.init(hardwareMap);
 
         waitForStart();
         //arm down

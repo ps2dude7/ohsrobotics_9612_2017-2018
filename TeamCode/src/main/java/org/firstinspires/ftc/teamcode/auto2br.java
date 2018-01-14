@@ -7,9 +7,9 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 /**
  * Created by ryaniscool on 1/12/18.
  */
-@Autonomous(name = "auto1rb", group = "Autonomous")
+@Autonomous(name = "auto2br", group = "Autonomous")
 
-public class auto2rb extends LinearOpMode {
+public class auto2br extends LinearOpMode {
 
     owoWhatsThis hardware = new owoWhatsThis();
 
@@ -17,17 +17,18 @@ public class auto2rb extends LinearOpMode {
 
     @Override
     public void runOpMode() throws InterruptedException {
+        hardware.init(hardwareMap);
 
         waitForStart();
         //arm down
         hardware.jewelStick.setPosition(0);
 
-        //move backwards
+        //move forward
         hardware.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         hardware.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
-        hardware.rightDrive.setTargetPosition(-rev / 12);
-        hardware.leftDrive.setTargetPosition(-rev / 12);
+        hardware.rightDrive.setTargetPosition(rev / 12);
+        hardware.leftDrive.setTargetPosition(rev / 12);
 
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);

@@ -1,17 +1,15 @@
 package org.firstinspires.ftc.teamcode;
 
-import com.qualcomm.robotcore.eventloop.opmode.Disabled;
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.util.ElapsedTime;
 
 /**
  * Created by ryaniscool on 1/12/18.
  */
-@Autonomous(name = "auto1rb", group = "Autonomous")
+@Autonomous(name = "auto1br", group = "Autonomous")
 
-public class auto1rb extends LinearOpMode {
+public class auto1br extends LinearOpMode {
 
     owoWhatsThis hardware = new owoWhatsThis();
 
@@ -19,17 +17,18 @@ public class auto1rb extends LinearOpMode {
 
     @Override
     public void runOpMode() throws InterruptedException {
+        hardware.init(hardwareMap);
 
         waitForStart();
         //arm down
         hardware.jewelStick.setPosition(0);
 
-        //move backwards
+        //move forwards
         hardware.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         hardware.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
-        hardware.rightDrive.setTargetPosition(-rev / 12);
-        hardware.leftDrive.setTargetPosition(-rev / 12);
+        hardware.rightDrive.setTargetPosition(rev / 12);
+        hardware.leftDrive.setTargetPosition(rev / 12);
 
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
