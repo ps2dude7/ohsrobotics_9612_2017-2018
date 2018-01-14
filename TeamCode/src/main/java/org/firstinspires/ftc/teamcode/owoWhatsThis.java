@@ -6,6 +6,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
+import com.qualcomm.robotcore.hardware.CRServo;
 
 public class owoWhatsThis {
 
@@ -21,8 +22,8 @@ public class owoWhatsThis {
     public Servo clawServo3     = null;
     public Servo clawServo4     = null;
     public Servo jewelStick     = null;
-    public Servo relicServo1    = null;
-    public Servo relicServo2    = null;
+
+    public CRServo relicServo1    = null;
     //youre mom gay
 
     HardwareMap defaultHwMap = null;
@@ -49,8 +50,7 @@ public class owoWhatsThis {
         clawServo3      = defaultHwMap.get(Servo.class, "clawTopLeft");
         clawServo4      = defaultHwMap.get(Servo.class, "clawBottomLeft");
         jewelStick      = defaultHwMap.get(Servo.class, "jewelStick");
-        relicServo1     = defaultHwMap.get(Servo.class, "relicServo1");
-        relicServo2     = defaultHwMap.get(Servo.class, "relicServo2");
+        relicServo1     = defaultHwMap.get(CRServo.class, "relicServo1");
 
         //set power to motors on power
         leftDrive.setPower(0);
@@ -59,13 +59,13 @@ public class owoWhatsThis {
         relicMotor.setPower(0);
 
         //Position Servos
-        clawServo1.setPosition(0);
-        clawServo2.setPosition(0);
-        clawServo3.setPosition(0);
-        clawServo4.setPosition(0);
-        jewelStick.setPosition(180);
-        relicServo1.setPosition(0);
-        relicServo1.setPosition(0);
+        clawServo1.setPosition(40);
+        clawServo2.setPosition(40);
+        clawServo3.setPosition(140);
+        clawServo4.setPosition(140);
+
+        relicServo1.setPower(0);
+        jewelStick.setPosition(90);
 
         //here us yoiu r v
         leftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
