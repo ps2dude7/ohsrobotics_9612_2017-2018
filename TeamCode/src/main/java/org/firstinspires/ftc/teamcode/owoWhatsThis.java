@@ -5,6 +5,7 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 public class owoWhatsThis {
@@ -21,8 +22,7 @@ public class owoWhatsThis {
     public Servo clawServo3     = null;
     public Servo clawServo4     = null;
     public Servo jewelStick     = null;
-    public Servo relicServo1    = null;
-    public Servo relicServo2    = null;
+    public CRServo relicServo1    = null;
     //youre mom gay
 
     HardwareMap defaultHwMap = null;
@@ -49,8 +49,7 @@ public class owoWhatsThis {
         clawServo3      = defaultHwMap.get(Servo.class, "clawTopLeft");
         clawServo4      = defaultHwMap.get(Servo.class, "clawBottomLeft");
         jewelStick      = defaultHwMap.get(Servo.class, "jewelStick");
-        relicServo1     = defaultHwMap.get(Servo.class, "relicServo1");
-        relicServo2     = defaultHwMap.get(Servo.class, "relicServo2");
+        relicServo1     = defaultHwMap.get(CRServo.class, "relicServo1");
 
         //set power to motors on power
         leftDrive.setPower(0);
@@ -61,15 +60,16 @@ public class owoWhatsThis {
         //Position Servos
         clawServo1.setPosition(0);
         clawServo2.setPosition(0);
-        clawServo3.setPosition(0);
-        clawServo4.setPosition(0);
+        clawServo3.setPosition(180);
+        clawServo4.setPosition(180);
+
         jewelStick.setPosition(180);
-        relicServo1.setPosition(0);
-        relicServo1.setPosition(0);
+        //Power CRservoes
+        relicServo1.setPower(0);
 
         //here us yoiu r v
-        leftDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        rightDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        leftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        rightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         armWinch.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         relicMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
     }

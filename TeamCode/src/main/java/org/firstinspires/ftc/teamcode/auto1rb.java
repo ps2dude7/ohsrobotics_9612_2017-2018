@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.util.ElapsedTime;
@@ -8,6 +9,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * Created by ryaniscool on 1/12/18.
  */
 @Autonomous(name = "auto1rb", group = "Autonomous")
+@Disabled
 public class auto1rb extends LinearOpMode {
 
     owoWhatsThis hardware = new owoWhatsThis();
