@@ -24,28 +24,28 @@ public class auto1rb extends LinearOpMode {
         waitForStart();
         //arm down
         hardware.jewelStick.setPosition(0);
-
+        sleep(500);
         //move backwards
         hardware.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         hardware.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-
+        
         hardware.rightDrive.setTargetPosition(-rev / 12);
         hardware.leftDrive.setTargetPosition(-rev / 12);
-
+        
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-
-        hardware.rightDrive.setPower(.5);
-        hardware.leftDrive.setPower(.5);
+        
+        hardware.rightDrive.setPower(.1);
+        hardware.leftDrive.setPower(.1);
 
 
         while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
                 //empty on purpose
         }
-
+        
         hardware.rightDrive.setPower(0);
         hardware.leftDrive.setPower(0);
-
+        
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
@@ -62,8 +62,8 @@ public class auto1rb extends LinearOpMode {
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        hardware.rightDrive.setPower(.5);
-        hardware.leftDrive.setPower(.5);
+        hardware.rightDrive.setPower(.1);
+        hardware.leftDrive.setPower(.1);
 
 
         while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
@@ -86,8 +86,8 @@ public class auto1rb extends LinearOpMode {
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        hardware.rightDrive.setPower(.5);
-        hardware.leftDrive.setPower(.5);
+        hardware.rightDrive.setPower(.1);
+        hardware.leftDrive.setPower(.1);
 
 
         while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
@@ -100,7 +100,6 @@ public class auto1rb extends LinearOpMode {
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
-
         hardware.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         hardware.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
@@ -110,8 +109,8 @@ public class auto1rb extends LinearOpMode {
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        hardware.rightDrive.setPower(.5);
-        hardware.leftDrive.setPower(.5);
+        hardware.rightDrive.setPower(.1);
+        hardware.leftDrive.setPower(.1);
 
 
         while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {

@@ -22,19 +22,19 @@ public class auto2br extends LinearOpMode {
         waitForStart();
         //arm down
         hardware.jewelStick.setPosition(0);
-
+        sleep(500);
         //move forward
         hardware.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         hardware.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
-        hardware.rightDrive.setTargetPosition(rev / 12);
-        hardware.leftDrive.setTargetPosition(rev / 12);
+        hardware.rightDrive.setTargetPosition(rev * 4 / 12);
+        hardware.leftDrive.setTargetPosition(-rev * 4 / 12);
 
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        hardware.rightDrive.setPower(.5);
-        hardware.leftDrive.setPower(.5);
+        hardware.rightDrive.setPower(.1);
+        hardware.leftDrive.setPower(.1);
 
 
         while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
@@ -54,14 +54,14 @@ public class auto2br extends LinearOpMode {
         hardware.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         hardware.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
-        hardware.rightDrive.setTargetPosition((int) (-rev * 2.125));
-        hardware.leftDrive.setTargetPosition((int) (rev * 2.125));
+        hardware.rightDrive.setTargetPosition((int) (-rev * 2.225));
+        hardware.leftDrive.setTargetPosition((int) (rev * 2.225));
 
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        hardware.rightDrive.setPower(.5);
-        hardware.leftDrive.setPower(.5);
+        hardware.rightDrive.setPower(.2);
+        hardware.leftDrive.setPower(.2);
 
 
         while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
@@ -78,14 +78,14 @@ public class auto2br extends LinearOpMode {
         hardware.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         hardware.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
-        hardware.rightDrive.setTargetPosition(rev);
-        hardware.leftDrive.setTargetPosition(rev);
+        hardware.rightDrive.setTargetPosition(2*rev);
+        hardware.leftDrive.setTargetPosition(2*rev);
 
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        hardware.rightDrive.setPower(.5);
-        hardware.leftDrive.setPower(.5);
+        hardware.rightDrive.setPower(.2);
+        hardware.leftDrive.setPower(.2);
 
 
         while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
@@ -102,14 +102,14 @@ public class auto2br extends LinearOpMode {
         hardware.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         hardware.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
-        hardware.rightDrive.setTargetPosition((int) (rev * 2.125));
-        hardware.leftDrive.setTargetPosition((int) (-rev * 2.125));
+        hardware.rightDrive.setTargetPosition((int) (rev * 2.225));
+        hardware.leftDrive.setTargetPosition((int) (-rev * 2.225));
 
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        hardware.rightDrive.setPower(.5);
-        hardware.leftDrive.setPower(.5);
+        hardware.rightDrive.setPower(.2);
+        hardware.leftDrive.setPower(.2);
 
 
         while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
@@ -132,8 +132,8 @@ public class auto2br extends LinearOpMode {
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        hardware.rightDrive.setPower(.5);
-        hardware.leftDrive.setPower(.5);
+        hardware.rightDrive.setPower(.2);
+        hardware.leftDrive.setPower(.2);
 
 
         while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {

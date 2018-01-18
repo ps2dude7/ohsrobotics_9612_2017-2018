@@ -22,7 +22,7 @@ public class auto1br extends LinearOpMode {
         waitForStart();
         //arm down
         hardware.jewelStick.setPosition(0);
-
+        sleep(500);
         //move forwards
         hardware.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         hardware.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
@@ -33,8 +33,8 @@ public class auto1br extends LinearOpMode {
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        hardware.rightDrive.setPower(.5);
-        hardware.leftDrive.setPower(.5);
+        hardware.rightDrive.setPower(.1);
+        hardware.leftDrive.setPower(.1);
 
 
         while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
@@ -60,8 +60,8 @@ public class auto1br extends LinearOpMode {
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        hardware.rightDrive.setPower(.5);
-        hardware.leftDrive.setPower(.5);
+        hardware.rightDrive.setPower(.1);
+        hardware.leftDrive.setPower(.1);
 
 
         while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
@@ -84,8 +84,8 @@ public class auto1br extends LinearOpMode {
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        hardware.rightDrive.setPower(.5);
-        hardware.leftDrive.setPower(.5);
+        hardware.rightDrive.setPower(.1);
+        hardware.leftDrive.setPower(.1);
 
 
         while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
@@ -108,8 +108,8 @@ public class auto1br extends LinearOpMode {
         hardware.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         hardware.leftDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        hardware.rightDrive.setPower(.5);
-        hardware.leftDrive.setPower(.5);
+        hardware.rightDrive.setPower(.1);
+        hardware.leftDrive.setPower(.1);
 
 
         while (hardware.leftDrive.isBusy() && hardware.rightDrive.isBusy()) {
