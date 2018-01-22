@@ -22,6 +22,8 @@ public class gayestBarInAtlantaOp extends LinearOpMode {
 
         hardware.init(hardwareMap);
 
+        csensor = hardwareMap.colorSensor.get("color");
+
         waitForStart();
 
         while (opModeIsActive()) {
@@ -59,22 +61,11 @@ public class gayestBarInAtlantaOp extends LinearOpMode {
                 hardware.clawServo4.setPosition(clawGrip4++);
             }
 
-            //relic motor
-            if (gamepad1.right_bumper) {
-                hardware.relicMotor.setPower(0.07);
-            } else if (gamepad1.left_bumper) {
-                hardware.relicMotor.setPower(-0.2);
+            if (gamepad1.b == true){
+                hardware.color_sensor.enableLed(true);
+                hardware.color_sensor.red();
             } else {
-                hardware.relicMotor.setPower(0);
-            }
-
-            //relic claw
-            if (gamepad1.right_trigger >= 0.1) {
-                hardware.relicServo1.setPower(-1);
-            } else if (gamepad1.left_trigger >= 0.1) {
-                hardware.relicServo1.setPower(1);
-            } else if (gamepad1.right_trigger <= 0.1 && gamepad1.left_trigger <= 0.1) {
-                hardware.relicServo1.setPower(0);
+                hardware.color_sensor.enableLed(false);
             }
         }
     }
