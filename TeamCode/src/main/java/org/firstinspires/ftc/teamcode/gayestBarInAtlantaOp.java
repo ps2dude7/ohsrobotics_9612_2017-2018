@@ -22,8 +22,6 @@ public class gayestBarInAtlantaOp extends LinearOpMode {
 
         hardware.init(hardwareMap);
 
-        csensor = hardwareMap.colorSensor.get("color");
-
         waitForStart();
 
         while (opModeIsActive()) {
