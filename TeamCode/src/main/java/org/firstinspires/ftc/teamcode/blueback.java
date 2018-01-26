@@ -7,9 +7,9 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 /**
  * Created by ryaniscool on 1/12/18.
  */
-@Autonomous(name = "auto4br", group = "Autonomous")
+@Autonomous(name = "blueback", group = "Autonomous")//both were br see blue forward, sees red back
 
-public class auto4br extends LinearOpMode {
+public class blueback extends LinearOpMode {
 
     owoWhatsThis hardware = new owoWhatsThis();
 
